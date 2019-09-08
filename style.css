@@ -26,11 +26,24 @@ li a {
     padding: 16px;
     text-decoration: none;
 }
-      
+#profilePhoto {
+    width: 50%;
+    height: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#huskyPhoto {
+    width: 30%;
+    height: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 li a:hover {
         background-color: #111111;
 }
-p {
+#contents {
     border: 1px solid lightslategray;
     padding: 30px;
 }
