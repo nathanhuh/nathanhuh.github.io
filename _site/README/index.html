@@ -1,0 +1,31 @@
+<h1>Personal Website</h1>
+<p>This repository contains the source code for Nathan Huh's personal website.</p>
+<h2>Overview</h2>
+<p>This is a static website built using the <a href="https://www.11ty.dev/">Eleventy (11ty)</a> static site generator. It serves as an online portfolio and presence for Nathan Huh, a Computer Science student at the University of Southern California.</p>
+<h2>Structure</h2>
+<ul>
+<li><strong>Source Files:</strong> Located primarily in the root directory (by default). Eleventy processes these.
+<ul>
+<li><code>index.html</code>: The main landing page template.</li>
+<li><code>profile.html</code>: Template for the profile page.</li>
+<li><code>resume.html</code>: Template for the resume page.</li>
+<li><code>personalProjects.html</code>: Template for the personal projects page.</li>
+<li><code>style.css</code>: Provides the styling for the website (copied by Eleventy).</li>
+<li><code>photo/</code>: Directory containing images used on the site (copied by Eleventy).</li>
+<li><code>pdf/</code>: Directory potentially containing PDF documents (copied by Eleventy).</li>
+</ul>
+</li>
+<li><strong>Output Directory:</strong> <code>_site/</code> - This directory contains the generated static website and is the one that should be deployed. It is created by running Eleventy.</li>
+<li><code>package.json</code> / <code>package-lock.json</code>: Define project dependencies, including Eleventy.</li>
+<li><code>.eleventy.js</code> (Optional): Configuration file for Eleventy (can be added for customization).</li>
+<li><code>README.md</code>: This file.</li>
+<li><code>CNAME</code>: Configuration file for a custom domain.</li>
+</ul>
+<h2>Development</h2>
+<ol>
+<li><strong>Install Dependencies:</strong> <code>npm install</code></li>
+<li><strong>Run Eleventy:</strong> <code>npx @11ty/eleventy</code> (builds the site to <code>_site/</code>)</li>
+<li><strong>Run Eleventy with Hot Reloading:</strong> <code>npx @11ty/eleventy --serve</code> (builds and serves locally, automatically rebuilding on changes)</li>
+</ol>
+<h2>Contact</h2>
+<p>Nathan Huh can be contacted via nhuh@usc.edu.</p>
