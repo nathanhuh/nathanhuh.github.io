@@ -1,11 +1,15 @@
+@import "tailwindcss";
+
 a {
     color: black;
 }
+
 h1 {
     font-family: Helvetica, Arial, Helvetica, sans-serif, sans-serif;
     font-size: 45px;
     text-align: center;
 }
+
 ul {
     text-align: left;
     list-style-type: none;
@@ -14,11 +18,11 @@ ul {
     overflow: hidden;
     background-color: #333333;
 }
-  
+
 li {
     float: left;
 }
-      
+
 li a {
     display: block;
     color: white;
@@ -26,6 +30,7 @@ li a {
     padding: 16px;
     text-decoration: none;
 }
+
 #profilePhoto {
     width: 50%;
     height: 50%;
@@ -33,6 +38,7 @@ li a {
     margin-left: auto;
     margin-right: auto;
 }
+
 #huskyPhoto {
     width: 30%;
     height: 30%;
@@ -40,9 +46,11 @@ li a {
     margin-left: auto;
     margin-right: auto;
 }
+
 li a:hover {
-        background-color: #111111;
+    background-color: #111111;
 }
+
 #contents {
     border: 1px solid lightslategray;
     padding: 30px;

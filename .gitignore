@@ -1,0 +1,12 @@
+# Node dependencies
+node_modules/
+
+# Eleventy output directory
+_site/
+
+# Build artifacts or temporary files
+.DS_Store
+desktop.ini
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

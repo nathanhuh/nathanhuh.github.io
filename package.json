@@ -1,0 +1,28 @@
+{
+  "name": "amberllama81.github.io",
+  "version": "1.0.0",
+  "description": "This repository contains the source code for Nathan Huh's personal website.",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "postcss ./src/style.css -o ./_site/style.css",
+    "watch:css": "postcss ./src/style.css -o ./_site/style.css --watch",
+    "build:eleventy": "eleventy",
+    "watch:eleventy": "eleventy --serve",
+    "build": "npm-run-all build:css build:eleventy",
+    "start": "npm-run-all --parallel watch:css watch:eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@tailwindcss/postcss": "^4.1.6"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "tailwindcss": "^4.1.6"
+  }
+}
