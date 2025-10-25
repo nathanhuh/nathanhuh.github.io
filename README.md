@@ -4,7 +4,7 @@ This repository contains the source code for Nathan Huh's personal website.
 
 ## Overview
 
-This is a static website built using the [Eleventy (11ty)](https://www.11ty.dev/) static site generator. It serves as an online portfolio and presence for Nathan Huh, a Computer Science student at the University of Southern California.
+This is a static website built using the [Eleventy (11ty)](https://www.11ty.dev/) static site generator. It serves as an online portfolio and presence for Nathan Huh, a Software Engineer (Infrastucture) for LG Uplus, telecommunication arm of LG group we all know and love. 
 
 ## Structure
 

@@ -1,34 +1,93 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Personal Projects - Nathan Huh</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Projects - Nathan Huh</title>
+    <meta name="description" content="Explore Nathan Huh&#39;s personal projects and technical experiments.">
     <link rel="stylesheet" href="/style.css">
 </head>
 
-<body>
-    <h1><a href="/index/" title="home">Nathan Huh</a></h1>
-    <div>
-        <ul>
-            <li><a href="/profile/" title="profile">Profile</a></li>
-            <li><a href="/resume/" title="resume">Resume</a></li>
-            <li><a href="/personalProjects/" title="personal projects">Personal Projects</a></li>
-        </ul>
+<body class="min-h-screen flex flex-col">
+    <header class="w-full border-b border-[#e5e5e5]">
+    <nav class="container">
+        <div class="flex items-center justify-between">
+            <a href="/" class="font-semibold tracking-tight hover:text-[#666666] transition-colors duration-200">
+                Nathan Huh
+            </a>
+            <div class="flex items-center gap-4 md:gap-6">
+                <a href="/profile/" class="text-sm text-[#666666] hover:text-[#1a1a1a] transition-colors duration-200">Profile</a>
+                <a href="/resume/" class="text-sm text-[#666666] hover:text-[#1a1a1a] transition-colors duration-200">Resume</a>
+                <a href="/personalProjects/" class="text-sm text-[#666666] hover:text-[#1a1a1a] transition-colors duration-200">Projects</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+    <main class="flex-1 pt-4">
+        
+<section class="container py-12 md:py-16">
+    <div class="max-w-3xl mx-auto">
+        <div class="mb-12">
+            <h1 class="text-4xl md:text-5xl font-semibold mb-4 tracking-tight">Personal Projects</h1>
+            <p class="text-lg text-[#666666]">A showcase of my technical experiments and side projects</p>
+        </div>
+
+        <!-- Under Construction Notice -->
+        <div class="bg-gradient-to-br from-[#f8fafc] to-[#f1f5f9] border border-[#e5e5e5] rounded-xl p-12 text-center">
+            <div class="max-w-md mx-auto">
+                <div class="mb-6">
+                    <svg class="w-20 h-20 mx-auto text-[#666666] opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                    </svg>
+                </div>
+                <h2 class="text-2xl font-semibold mb-3 tracking-tight">Under Construction</h2>
+                <p class="text-base text-[#666666] leading-relaxed mb-6">
+                    This section is currently being built. Check back soon to see my latest projects and technical experiments.
+                </p>
+                <p class="text-sm text-[#999999]">
+                    In the meantime, feel free to check out my profile or resume.
+                </p>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="mt-12 grid md:grid-cols-2 gap-6">
+            <a href="/profile/" class="p-6 border border-[#e5e5e5] rounded-xl hover:border-[#1a1a1a] hover:shadow-sm transition-all duration-200 group">
+                <h3 class="text-lg font-semibold mb-2 group-hover:text-[#2563eb] transition-colors duration-200">View Profile</h3>
+                <p class="text-sm text-[#666666] leading-relaxed">Learn more about my background and education</p>
+            </a>
+            <a href="/resume/" class="p-6 border border-[#e5e5e5] rounded-xl hover:border-[#1a1a1a] hover:shadow-sm transition-all duration-200 group">
+                <h3 class="text-lg font-semibold mb-2 group-hover:text-[#2563eb] transition-colors duration-200">View Resume</h3>
+                <p class="text-sm text-[#666666] leading-relaxed">Check out my professional experience and skills</p>
+            </a>
+        </div>
     </div>
-    <div id="contents">
-        <p>
-            This part of the website is currently under construction.
-        </p>
-        <p>
-            Sorry for causing inconvenience.
-        </p>
+</section>
+
+    </main>
+
+    <footer class="w-full border-t border-[#e5e5e5] mt-auto">
+    <div class="container py-8 md:py-12">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+            <div>
+                <p class="text-sm text-[#666666] mb-1">Nathan Huh</p>
+                <p class="text-sm text-[#999999]">Site Reliability Engineer @ LG Uplus</p>
+            </div>
+            <div class="flex flex-col items-start md:items-end gap-2">
+                <a href="mailto:nhuh@usc.edu" class="text-sm text-[#666666] hover:text-[#2563eb] transition-colors duration-200">
+                    nhuh@usc.edu
+                </a>
+                <a href="mailto:namjun811@gmail.com" class="text-sm text-[#999999] hover:text-[#666666] transition-colors duration-200">
+                    namjun811@gmail.com
+                </a>
+            </div>
+        </div>
     </div>
-    <hr>
-    <address>
-        Written by Nathan Huh<br>
-        You can contact me via namjun811@gmail.com
-    </address>
+</footer>
+
 </body>
 
 </html>

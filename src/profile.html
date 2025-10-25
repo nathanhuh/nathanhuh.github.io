@@ -1,37 +1,56 @@
-<!doctype html>
-<html>
+---
+layout: base.njk
+title: Profile - Nathan Huh
+description: Learn more about Nathan Huh, Site Reliability Engineer at LG Uplus and USC Computer Science graduate.
+---
 
-<head>
-    <title>Profile - Nathan Huh</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/style.css">
-</head>
+<section class="container py-12 md:py-16">
+    <div class="max-w-3xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-semibold mb-8 tracking-tight">Profile</h1>
 
-<body>
-    <h1><a href=/index/ title="Home">Nathan Huh</a></h1>
-    <div>
-        <ul>
-            <li><a href=/profile/ title="Profile">Profile</a></li>
-            <li><a href=/resume/ title="Resume">Resume</a></li>
-            <li><a href=/personalProjects/ title="Personal Projects">Personal Projects</a></li>
-        </ul>
+        <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-start mb-8">
+            <div class="order-2 md:order-1">
+                <div class="prose prose-lg">
+                    <p class="text-lg text-[#666666] leading-relaxed mb-4">
+                        Nathan Huh (born August 11, 2000) is a Site Reliability Engineer at LG Uplus, and a class of 2024 graduate
+                        for Bachelor of Science in Computer Science at USC.
+                    </p>
+                    <p class="text-base text-[#666666] leading-relaxed mb-4">
+                        Nathan Huh was born in Busan, Republic of Korea and moved to Cheonan, South Korea to go to boarding school.
+                        He graduated <a href="https://www.bugilacademy.org/eng/index" class="text-[#2563eb] hover:underline">Bugil Academy Global Leader Program</a> in 2019
+                        and enrolled to the University of Southern California.
+                    </p>
+                    <p class="text-base text-[#666666] leading-relaxed mb-4">
+                        After graduating from USC, he joined LG Uplus as a Site Reliability Engineer.
+                    </p>
+                </div>
+            </div>
+            <div class="order-1 md:order-2">
+                <img src="/photo/photoCoex.jpg"
+                     alt="Photo of Nathan Huh"
+                     class="w-full rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300">
+            </div>
+        </div>
+
+        <!-- Education Section -->
+        <div class="mt-12 p-8 bg-[#ffffff] border border-[#e5e5e5] rounded-xl">
+            <h2 class="text-2xl md:text-3xl font-semibold mb-6 tracking-tight">Education</h2>
+            <div class="space-y-6">
+                <div>
+                    <div class="flex items-baseline gap-3 mb-2">
+                        <h3 class="text-xl font-semibold tracking-tight">University of Southern California</h3>
+                        <span class="text-sm text-[#999999]">2019 - 2024</span>
+                    </div>
+                    <p class="text-base text-[#666666]">Bachelor of Science in Computer Science</p>
+                </div>
+                <div>
+                    <div class="flex items-baseline gap-3 mb-2">
+                        <h3 class="text-xl font-semibold tracking-tight">Bugil Academy Global Leader Program</h3>
+                        <span class="text-sm text-[#999999]">Graduated 2019</span>
+                    </div>
+                    <p class="text-base text-[#666666]">High School</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div id="contents">
-        <img src="/photo/photoCoex.jpg" alt="Photo of Myself" id="profilePhoto">
-        <p>Nathan Huh (born August 11, 2000) is a Site Reliability Engineer @ LG Uplus, and a class of 2024 graduate
-            for Bachelor of Science in Computer Science @ USC.
-        </p>
-        <p>Nathan Huh was born in Busan, Republic of Korea and moved to Cheonan, South Korea to go to boarding school.
-            He graduated <a href=https://www.bugilacademy.org/eng/index>Bugil Academy Global Leader Program</a>> in 2019
-            and enrolled to the University of Southern California.</p>
-        <p>After graduating from USC, he joined LG Uplus as a Site Reliability Engineer.</p>
-        <p>He has a <a href=/index/ title="personal website">personal website</a> built by himself with HTML/CSS.</p>
-    </div>
-    <hr>
-    <address>
-        Written by Nathan Huh<br>
-        You can contact me via namjun811@gmail.com
-    </address>
-</body>
-
-</html>
+</section>

@@ -1,44 +1,134 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Home - Nathan Huh</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathan Huh - Site Reliability Engineer</title>
+    <meta name="description" content="Site Reliability Engineer at LG Uplus, USC Computer Science graduate. Building reliable infrastructure at scale.">
     <link rel="stylesheet" href="/style.css">
 </head>
 
-<body>
-    <h1><a href="/index/" title="Home">Nathan Huh</a></h1>
-    <div>
-        <ul>
-            <li><a href="/profile/" title="Profile">Profile</a></li>
-            <li><a href="/resume/" title="Resume">Resume</a></li>
-            <li><a href="/personalProjects/" title="Personal Projects">Personal Projects</a></li>
-        </ul>
+<body class="min-h-screen flex flex-col">
+    <header class="w-full border-b border-[#e5e5e5]">
+    <nav class="container">
+        <div class="flex items-center justify-between">
+            <a href="/" class="font-semibold tracking-tight hover:text-[#666666] transition-colors duration-200">
+                Nathan Huh
+            </a>
+            <div class="flex items-center gap-4 md:gap-6">
+                <a href="/profile/" class="text-sm text-[#666666] hover:text-[#1a1a1a] transition-colors duration-200">Profile</a>
+                <a href="/resume/" class="text-sm text-[#666666] hover:text-[#1a1a1a] transition-colors duration-200">Resume</a>
+                <a href="/personalProjects/" class="text-sm text-[#666666] hover:text-[#1a1a1a] transition-colors duration-200">Projects</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+    <main class="flex-1 pt-4">
+        
+<!-- Hero Section -->
+        <section id="hero" class="container py-16 md:py-24 lg:py-32">
+            <div class="max-w-3xl mx-auto">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold mb-6 leading-tight tracking-tight">
+                    Site Reliability Engineer building resilient infrastructure
+                </h1>
+                <p class="text-lg md:text-xl text-[#666666] mb-8 leading-relaxed">
+                    Currently at LG Uplus, ensuring high availability and performance for millions of users. USC Computer Science graduate passionate about automation, observability, and system design.
+                </p>
+                <div class="flex items-center gap-4">
+                    <a href="/resume/" class="inline-flex items-center px-6 py-3 bg-[#2563eb] text-white rounded-lg font-medium hover:bg-[#1d4ed8] transition-all duration-300 hover:shadow-lg">
+                        View Resume
+                    </a>
+                    <a href="mailto:nhuh@usc.edu" class="inline-flex items-center px-6 py-3 border border-[#e5e5e5] rounded-lg font-medium hover:border-[#1a1a1a] transition-colors duration-200">
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="container py-12 md:py-16">
+            <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+                <div class="order-2 md:order-1">
+                    <h2 class="text-2xl md:text-3xl font-semibold mb-4 tracking-tight">
+                        Infrastructure that scales
+                    </h2>
+                    <p class="text-base text-[#666666] mb-4 leading-relaxed">
+                        I specialize in building and maintaining reliable systems that power critical services. At LG Uplus, I work on infrastructure automation, monitoring solutions, and incident response for one of South Korea's leading telecommunications providers.
+                    </p>
+                    <p class="text-base text-[#666666] leading-relaxed">
+                        My approach combines proactive monitoring, rigorous testing, and pragmatic solutions to ensure systems remain available and performant under any condition.
+                    </p>
+                </div>
+                <div class="order-1 md:order-2">
+                    <img src="/photo/photoHusky.JPG"
+                         alt="Husky"
+                         class="w-full rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                </div>
+            </div>
+        </section>
+
+        <!-- Current Role Highlight -->
+        <section id="current-role" class="container py-12 md:py-16">
+            <div class="max-w-3xl">
+                <div class="flex items-baseline gap-3 mb-3">
+                    <h3 class="text-xl md:text-2xl font-semibold tracking-tight">
+                        LG Uplus
+                    </h3>
+                    <span class="text-sm text-[#999999]">2024 - Present</span>
+                </div>
+                <p class="text-base text-[#666666] mb-6 leading-relaxed">
+                    Site Reliability Engineer focused on infrastructure reliability, automation, and performance optimization for enterprise-scale telecommunications systems.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-[#f5f5f5] text-sm text-[#666666] rounded-md">Kubernetes</span>
+                    <span class="px-3 py-1 bg-[#f5f5f5] text-sm text-[#666666] rounded-md">Infrastructure as Code</span>
+                    <span class="px-3 py-1 bg-[#f5f5f5] text-sm text-[#666666] rounded-md">Observability</span>
+                    <span class="px-3 py-1 bg-[#f5f5f5] text-sm text-[#666666] rounded-md">CI/CD</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Links Section -->
+        <section id="quick-links" class="container py-12 md:py-16 mb-8">
+            <div class="grid md:grid-cols-3 gap-6">
+                <a href="/profile/" class="p-6 border border-[#e5e5e5] rounded-xl hover:border-[#1a1a1a] hover:shadow-sm transition-all duration-200 group">
+                    <h3 class="text-lg font-semibold mb-2 group-hover:text-[#2563eb] transition-colors duration-200">Profile</h3>
+                    <p class="text-sm text-[#666666] leading-relaxed">Learn more about my background, education, and professional journey</p>
+                </a>
+                <a href="/resume/" class="p-6 border border-[#e5e5e5] rounded-xl hover:border-[#1a1a1a] hover:shadow-sm transition-all duration-200 group">
+                    <h3 class="text-lg font-semibold mb-2 group-hover:text-[#2563eb] transition-colors duration-200">Resume</h3>
+                    <p class="text-sm text-[#666666] leading-relaxed">View my professional experience, skills, and qualifications</p>
+                </a>
+                <a href="/personalProjects/" class="p-6 border border-[#e5e5e5] rounded-xl hover:border-[#1a1a1a] hover:shadow-sm transition-all duration-200 group">
+                    <h3 class="text-lg font-semibold mb-2 group-hover:text-[#2563eb] transition-colors duration-200">Projects</h3>
+                    <p class="text-sm text-[#666666] leading-relaxed">Explore my personal projects and technical experiments</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="w-full border-t border-[#e5e5e5] mt-auto">
+    <div class="container py-8 md:py-12">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+            <div>
+                <p class="text-sm text-[#666666] mb-1">Nathan Huh</p>
+                <p class="text-sm text-[#999999]">Site Reliability Engineer @ LG Uplus</p>
+            </div>
+            <div class="flex flex-col items-start md:items-end gap-2">
+                <a href="mailto:nhuh@usc.edu" class="text-sm text-[#666666] hover:text-[#2563eb] transition-colors duration-200">
+                    nhuh@usc.edu
+                </a>
+                <a href="mailto:namjun811@gmail.com" class="text-sm text-[#999999] hover:text-[#666666] transition-colors duration-200">
+                    namjun811@gmail.com
+                </a>
+            </div>
+        </div>
     </div>
-    <div id="contents">
-        <img src="/photo/photoHusky.JPG" alt="Photo of My Cat, Husky" id="huskyPhoto">
-        <p>
-            Hi. My name is Nathan Huh,
-            and I am a Site Reliability Engineer @ LG Uplus, and a class of 2024 graduate for
-            Bachelor of Science in Computer Science @ USC.
-        </p>
-        <p>
-            Welcome to my personal website!
-            This website is currently under development
-            but you can always check the current contents.
-        </p>
-        <p>
-            There are three sections on this website.
-            You can find out more about me via profile, check my resume via resume, or my pet projects via personal
-            projects.
-        </p>
-    </div>
-    <hr>
-    <address>
-        Written by Nathan Huh<br>
-        You can contact me via namjun811@gmail.com
-    </address>
+</footer>
+
 </body>
 
 </html>

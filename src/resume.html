@@ -1,29 +1,51 @@
-<!doctype html>
-<html>
+---
+layout: base.njk
+title: Resume - Nathan Huh
+description: View Nathan Huh's professional experience, skills, and qualifications as a Site Reliability Engineer.
+---
 
-<head>
-    <title>Resume - Nathan Huh</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/style.css">
-</head>
+<section class="container py-12 md:py-16">
+    <div class="max-w-3xl mx-auto">
+        <div class="mb-8">
+            <h1 class="text-4xl md:text-5xl font-semibold mb-4 tracking-tight">Resume</h1>
+            <p class="text-lg text-[#666666]">View my professional experience, skills, and qualifications</p>
+        </div>
 
-<body>
-    <h1><a href="/index/" title="Home">Nathan Huh</a></h1>
-    <div>
-        <ul>
-            <li><a href="/profile/" title="Profile">Profile</a></li>
-            <li><a href="/resume/" title="Resume">Resume</a></li>
-            <li><a href="/personalProjects/" title="Personal Projects">Personal Projects</a></li>
-        </ul>
+        <!-- PDF Viewer with modern styling -->
+        <div class="bg-[#ffffff] border border-[#e5e5e5] rounded-xl overflow-hidden shadow-sm">
+            <div class="p-4 bg-gradient-to-r from-[#f8fafc] to-[#f1f5f9] border-b border-[#e5e5e5] flex items-center justify-between">
+                <span class="text-sm font-medium text-[#666666]">resume_nathanHuh.pdf</span>
+                <a href="/pdf/resume_nathanHuh.pdf"
+                   download
+                   class="inline-flex items-center px-4 py-2 bg-[#2563eb] text-white text-sm rounded-lg font-medium hover:bg-[#1d4ed8] transition-all duration-300 hover:shadow-lg">
+                    Download PDF
+                </a>
+            </div>
+            <div class="relative" style="height: 800px;">
+                <iframe src="/pdf/resume_nathanHuh.pdf"
+                        class="w-full h-full"
+                        style="border: none;">
+                    <div class="p-8 text-center">
+                        <p class="text-[#666666] mb-4">This browser does not support PDFs.</p>
+                        <a href="/pdf/resume_nathanHuh.pdf"
+                           class="inline-flex items-center px-6 py-3 bg-[#2563eb] text-white rounded-lg font-medium hover:bg-[#1d4ed8] transition-all duration-300">
+                            Download PDF
+                        </a>
+                    </div>
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="mt-8 flex flex-wrap gap-4 justify-center">
+            <a href="/profile/"
+               class="inline-flex items-center px-6 py-3 border border-[#e5e5e5] rounded-lg font-medium hover:border-[#1a1a1a] transition-colors duration-200">
+                View Profile
+            </a>
+            <a href="/personalProjects/"
+               class="inline-flex items-center px-6 py-3 border border-[#e5e5e5] rounded-lg font-medium hover:border-[#1a1a1a] transition-colors duration-200">
+                View Projects
+            </a>
+        </div>
     </div>
-    <iframe src="/pdf/resume_nathanHuh.pdf" width="100%" height="300%">
-        This browser does not support PDFs. Please download the PDF to view it:
-        <a href="/pdf/resume_nathanHuh.pdf">Download PDF</a></iframe>
-    <hr>
-    <address>
-        Written by Nathan Huh<br>
-        You can contact me via namjun811@gmail.com
-    </address>
-</body>
-
-</html>
+</section>
