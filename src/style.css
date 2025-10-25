@@ -149,8 +149,8 @@ a {
 
 /* Custom Component Styles */
 
-/* Enhanced Header - Glassmorphism */
-header {
+/* Enhanced Header - Glassmorphism - Only for body > header (site header) */
+body > header {
   background: rgba(17, 17, 17, 0.7);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
@@ -162,17 +162,17 @@ header {
   transition: all var(--transition-base);
 }
 
-header .container {
+body > header .container {
   padding-top: var(--space-4);
   padding-bottom: var(--space-4);
 }
 
-header nav a {
+body > header nav a {
   position: relative;
   padding: var(--space-1);
 }
 
-header nav a::after {
+body > header nav a::after {
   content: '';
   position: absolute;
   bottom: -4px;
@@ -183,14 +183,13 @@ header nav a::after {
   transition: width var(--transition-base);
 }
 
-header nav a:hover::after {
+body > header nav a:hover::after {
   width: 100%;
 }
 
 /* Logo link styling - only targets the "Nathan Huh" link */
-header nav > div > a:first-child {
-  font-size: 1.25rem;
-  padding: var(--space-4);
+body > header nav > div > a:first-child {
+  font-size: var(--text-3xl);
 }
 
 /* Enhanced Buttons */
@@ -321,8 +320,8 @@ header nav > div > a:first-child {
   box-shadow: var(--shadow-sm);
 }
 
-/* Footer - Glassmorphism */
-footer {
+/* Footer - Glassmorphism - Only for body > footer (site footer) */
+body > footer {
   background: rgba(17, 17, 17, 0.7);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
@@ -330,7 +329,7 @@ footer {
   box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.3);
 }
 
-footer a:hover {
+body > footer a:hover {
   color: var(--color-accent);
 }
 
@@ -404,4 +403,143 @@ main section:nth-child(4) { animation-delay: 400ms; }
 
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, var(--color-accent-dark), var(--color-purple));
+}
+
+/* Blog Post Prose Styles */
+.prose {
+  color: var(--color-text-primary);
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  color: var(--color-text-primary);
+  margin-top: 2em;
+  margin-bottom: 1em;
+  font-weight: 700;
+}
+
+.prose h1 {
+  font-size: var(--text-4xl);
+  margin-top: 0;
+}
+
+.prose h2 {
+  font-size: var(--text-2xl);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.5rem;
+}
+
+.prose h3 {
+  font-size: var(--text-xl);
+}
+
+.prose p {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+  line-height: var(--leading-relaxed);
+}
+
+.prose a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-decoration-color: rgba(139, 92, 246, 0.3);
+  text-underline-offset: 2px;
+  transition: all var(--transition-fast);
+}
+
+.prose a:hover {
+  color: var(--color-accent-light);
+  text-decoration-color: var(--color-accent-light);
+}
+
+.prose strong {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.prose code {
+  background: rgba(139, 92, 246, 0.1);
+  color: var(--color-accent-light);
+  padding: 0.2em 0.4em;
+  border-radius: var(--radius-sm);
+  font-size: 0.9em;
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+}
+
+.prose pre {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  overflow-x: auto;
+  margin: 1.5em 0;
+}
+
+.prose pre code {
+  background: transparent;
+  padding: 0;
+  color: var(--color-text-primary);
+}
+
+.prose ul,
+.prose ol {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+  padding-left: 1.5em;
+}
+
+.prose li {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.prose ul > li {
+  list-style-type: disc;
+}
+
+.prose ol > li {
+  list-style-type: decimal;
+}
+
+.prose blockquote {
+  border-left: 4px solid var(--color-accent);
+  padding-left: var(--space-4);
+  margin: 1.5em 0;
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+.prose hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 2em 0;
+}
+
+.prose img {
+  border-radius: var(--radius-lg);
+  margin: 1.5em 0;
+  max-width: 100%;
+  height: auto;
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+}
+
+.prose th,
+.prose td {
+  border: 1px solid var(--color-border);
+  padding: var(--space-2) var(--space-3);
+  text-align: left;
+}
+
+.prose th {
+  background: var(--color-bg-card);
+  font-weight: 600;
 }
