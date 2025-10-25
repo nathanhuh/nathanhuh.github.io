@@ -5,6 +5,25 @@ module.exports = function (eleventyConfig) {
     // If you have other static assets like favicons, add them here too
     // eleventyConfig.addPassthroughCopy("src/favicon.ico");
 
+    // Blog collection
+    eleventyConfig.addCollection("blog", function(collectionApi) {
+        return collectionApi.getFilteredByGlob("src/blog/*.md");
+    });
+
+    // Date filters
+    eleventyConfig.addFilter("date", function(date, format) {
+        const d = new Date(date);
+        const months = ["January", "February", "March", "April", "May", "June",
+                       "July", "August", "September", "October", "November", "December"];
+
+        if (format === "YYYY-MM-DD") {
+            return d.toISOString().split('T')[0];
+        } else if (format === "MMMM DD, YYYY") {
+            return `${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+        }
+        return d.toLocaleDateString();
+    });
+
     return {
         dir: {
             input: "src",
