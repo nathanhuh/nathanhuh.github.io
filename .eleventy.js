@@ -8,11 +8,9 @@ module.exports = function (eleventyConfig) {
     return {
         dir: {
             input: "src",
-            output: "_site"
-            // Optional: Set layouts, includes, data directories if needed later
-            // layouts: "_layouts",
-            // includes: "_includes",
-            // data: "_data"
+            output: "_site",
+            includes: "_includes",
+            layouts: "_includes"
         },
 
         templateFormats: ["html", "njk", "md"], // Add others like liquid, 11ty.js if you use them
