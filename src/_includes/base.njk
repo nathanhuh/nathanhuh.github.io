@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title | default("Nathan Huh - Site Reliability Engineer") }}</title>
-    <meta name="description" content="{{ description | default("Site Reliability Engineer at LG Uplus, USC Computer Science graduate. Building reliable infrastructure at scale.") }}">
+    <title>{{ title | default("Nathan Huh - DevOps Engineer") }}</title>
+    <meta name="description" content="{{ description | default("DevOps Engineer at LG Uplus, USC Computer Science graduate. Building reliable infrastructure at scale.") }}">
     <link rel="stylesheet" href="/style.css">
 </head>
 
 <body class="min-h-screen flex flex-col">
     {% include "header.njk" %}
 
-    <main class="flex-1 pt-4">
+    <main class="flex-1 pt-4 {% if not noPadding %}pb-16{% endif %}">
         {{ content | safe }}
     </main>
 
