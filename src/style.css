@@ -187,10 +187,7 @@ body > header nav a:hover::after {
   width: 100%;
 }
 
-/* Logo link styling - only targets the "Nathan Huh" link */
-body > header nav > div > a:first-child {
-  font-size: var(--text-3xl);
-}
+/* Logo link styling is now handled via Tailwind classes in header.njk */
 
 /* Enhanced Buttons */
 .bg-\[\#2563eb\] {
