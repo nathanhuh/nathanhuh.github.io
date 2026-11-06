@@ -4,11 +4,13 @@
   "description": "This repository contains the source code for Nathan Huh's personal website.",
   "main": "index.js",
   "scripts": {
+    "clean": "node -e \"require('node:fs').rmSync('_site', { recursive: true, force: true })\"",
     "build:css": "postcss ./src/style.css -o ./_site/style.css",
     "watch:css": "postcss ./src/style.css -o ./_site/style.css --watch",
     "build:eleventy": "eleventy",
     "watch:eleventy": "eleventy --serve",
-    "build": "npm-run-all build:css build:eleventy",
+    "build": "npm-run-all clean build:css build:eleventy",
+    "prestart": "npm run clean",
     "start": "npm-run-all --parallel watch:css watch:eleventy"
   },
   "keywords": [],
