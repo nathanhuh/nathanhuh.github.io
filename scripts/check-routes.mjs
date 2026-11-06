@@ -37,7 +37,13 @@ for (const { from, to } of routes.assets) {
     assert.ok(file.length > 0 && (await readRoute(from)).equals(file), `Invalid asset at ${from}`);
 }
 
-assert.ok((await readRoute("/index.html")).equals(await readRoute("/")), "Legacy home page");
+const home = (await readRoute("/")).toString();
+const legacyHome = (await readRoute("/index.html")).toString();
+// The CDN rewrites email links per response. Compare stable page identifiers.
+for (const pattern of [/<title>.+?<\/title>/s, /<h1\b[^>]*>.+?<\/h1>/s]) {
+    const marker = home.match(pattern)?.[0];
+    assert.ok(marker && legacyHome.includes(marker), "Legacy home page title or heading differs");
+}
 for (const route of [...routes.retired, "/missing/nat-19-check/"]) {
     const page = await readRoute(route, 404);
     assert.ok(page.includes(">Page not found</h1>") && page.includes('href="/"'),
