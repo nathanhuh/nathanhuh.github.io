@@ -37,6 +37,12 @@ jobs:
       - name: Build site
         run: npm run build
 
+      - name: Check public routes before upload
+        run: |
+          test -s _site/index.html
+          test ! -e _site/src
+          test ! -e _site/README
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
