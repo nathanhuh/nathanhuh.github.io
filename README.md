@@ -24,9 +24,13 @@ This is a static website built using the [Eleventy (11ty)](https://www.11ty.dev/
 
 ## Development
 
-1.  **Install Dependencies:** `npm install`
+1.  **Install dependencies** with Node 22.22.2 or a newer Node 22 patch using `npm ci`.
 2.  **Run Eleventy:** `npx @11ty/eleventy` (builds the site to `_site/`)
 3.  **Run Eleventy with Hot Reloading:** `npx @11ty/eleventy --serve` (builds and serves locally, automatically rebuilding on changes)
+
+## Dependency security
+
+Run `npm audit --include=dev --audit-level=low` after a clean install. Pull-request validation checks the full build dependency tree. See the [security audit](docs/security-audit.md) for the baseline, fixed versions, verification results and repeatable audit procedure.
 
 ## Deployment
 
