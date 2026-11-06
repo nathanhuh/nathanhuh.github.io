@@ -1,0 +1,20 @@
+{
+  "redirects": [
+    { "from": "/index/", "to": "/" },
+    { "from": "/profile.html", "to": "/profile/" },
+    { "from": "/resume.html", "to": "/resume/" },
+    { "from": "/personalProjects.html", "to": "/personalProjects/" }
+  ],
+  "assets": [
+    { "from": "/amberllama81.github.io/photo/photoHusky.JPG", "to": "/photo/photoHusky.JPG" },
+    { "from": "/amberllama81.github.io/photo/photoHusky.jpg", "to": "/photo/photoHusky.JPG" },
+    { "from": "/amberllama81.github.io/pdf/resume_nathanHuh.pdf", "to": "/pdf/Namjun_Huh_Resume.pdf" },
+    { "from": "/photo/photoHusky 2.JPG", "to": "/photo/photoHusky.JPG" },
+    { "from": "/pdf/resume_nathanHuh 2.pdf", "to": "/pdf/Namjun_Huh_Resume.pdf" }
+  ],
+  "retired": [
+    "/src/", "/src/profile/", "/src/resume/", "/src/personalProjects/", "/README/",
+    "/photo/photoCoex.jpg", "/amberllama81.github.io/photo/photoCoex.jpg",
+    "/photo/photoCoex 2.jpg"
+  ]
+}

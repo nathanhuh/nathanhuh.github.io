@@ -1,0 +1,21 @@
+---
+pagination:
+  data: legacyRoutes.redirects
+  size: 1
+  alias: route
+permalink: "{{ route.from }}"
+eleventyExcludeFromCollections: true
+---
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page moved | Nathan Huh</title>
+    <link rel="canonical" href="https://nathanhuh.com{{ route.to }}">
+    <meta http-equiv="refresh" content="0; url={{ route.to }}">
+</head>
+<body>
+    <p>This page has moved. <a href="{{ route.to }}">Continue to the current page</a>.</p>
+</body>
+</html>

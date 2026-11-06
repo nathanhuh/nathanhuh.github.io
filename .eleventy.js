@@ -2,6 +2,17 @@ module.exports = function (eleventyConfig) {
     // Passthrough copy for assets
     eleventyConfig.addPassthroughCopy("src/photo");
     eleventyConfig.addPassthroughCopy("src/pdf");
+    // Old image and PDF embeds need the file itself at the original address.
+    eleventyConfig.on("eleventy.after", async ({ dir }) => {
+        const fs = require("node:fs/promises");
+        const path = require("node:path");
+        const { assets } = JSON.parse(await fs.readFile("src/_data/legacyRoutes.json", "utf8"));
+        for (const { from, to } of assets) {
+            const alias = path.join(dir.output, from);
+            await fs.mkdir(path.dirname(alias), { recursive: true });
+            await fs.copyFile(path.join(dir.output, to), alias);
+        }
+    });
     // If you have other static assets like favicons, add them here too
     // eleventyConfig.addPassthroughCopy("src/favicon.ico");
 
