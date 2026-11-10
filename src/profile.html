@@ -4,53 +4,88 @@ title: Profile - Nathan Huh
 description: Learn more about Nathan Huh, DevOps Engineer at LG Uplus and USC Computer Science graduate.
 ---
 
-<section class="container py-12 md:py-16">
-    <div class="max-w-6xl mx-auto">
-        <h1 class="text-4xl md:text-5xl font-semibold mb-8 tracking-tight">Profile</h1>
+<section class="shell interior">
+    <header class="page-heading">
+        <h1>About</h1>
+    </header>
 
-        <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-start mb-8">
-            <div class="order-2 md:order-1">
-                <div class="prose prose-lg">
-                    <p class="text-lg text-[#666666] leading-relaxed mb-4">
-                        Nathan Huh is a DevOps Engineer at LG Uplus and graduated in 2024 with a Bachelor of Science in Computer Science from USC.
-                    </p>
-                    <p class="text-base text-[#666666] leading-relaxed mb-4">
-                        Nathan Huh was born in Busan, Republic of Korea, and moved to Cheonan, South Korea to attend boarding school.
-                        He graduated from <a href="https://www.bugilacademy.org/eng/index" class="text-[#2563eb] hover:underline">Bugil Academy Global Leader Program</a> in 2019
-                        and enrolled at the <a href="https://www.usc.edu" class="text-[#2563eb] hover:underline">University of Southern California</a>.
-                    </p>
-                    <p class="text-base text-[#666666] leading-relaxed mb-4">
-                        He served two years in the South Korean military during the COVID-19 pandemic and returned to USC in 2022.
-                        After graduating from USC, he joined LG Uplus as a DevOps Engineer.
-                    </p>
-                </div>
-            </div>
-            <div class="order-1 md:order-2">
-                <img src="/photo/photoNathanUSC.jpeg"
-                     alt="Photo of Nathan Huh"
-                     class="w-full rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300">
-            </div>
+    <div class="about-grid section-rule">
+        <div class="prose">
+            <p>Nathan Huh is a DevOps Engineer at LG Uplus and graduated in 2024 with a Bachelor of Science in Computer Science from USC.</p>
+            <p>
+                Nathan Huh was born in Busan, Republic of Korea, and moved to Cheonan, South Korea to attend boarding school.
+                He graduated from <a href="https://www.bugilacademy.org/eng/index">Bugil Academy Global Leader Program</a> in 2019
+                and enrolled at the <a href="https://www.usc.edu">University of Southern California</a>.
+            </p>
+            <p>
+                He served two years in the South Korean military during the COVID-19 pandemic and returned to USC in 2022.
+                After graduating from USC, he joined LG Uplus as a DevOps Engineer.
+            </p>
+            <p><a class="text-link" href="/pdf/Namjun_Huh_Resume.pdf" download>Download résumé (PDF) <span aria-hidden="true">↓</span></a></p>
         </div>
-
-        <!-- Education Section -->
-        <div class="mt-12 mb-16 p-8 bg-[#ffffff] border border-[#e5e5e5] rounded-xl">
-            <h2 class="text-2xl md:text-3xl font-semibold mb-6 tracking-tight">Education</h2>
-            <div class="space-y-6">
-                <div>
-                    <div class="flex items-baseline gap-3 mb-2">
-                        <h3 class="text-xl font-semibold tracking-tight">University of Southern California</h3>
-                        <span class="text-sm text-[#999999]">2019 - 2024</span>
-                    </div>
-                    <p class="text-base text-[#666666]">Bachelor of Science in Computer Science</p>
-                </div>
-                <div>
-                    <div class="flex items-baseline gap-3 mb-2">
-                        <h3 class="text-xl font-semibold tracking-tight">Bugil Academy Global Leader Program</h3>
-                        <span class="text-sm text-[#999999]">Graduated 2019</span>
-                    </div>
-                    <p class="text-base text-[#666666]">High School</p>
-                </div>
-            </div>
-        </div>
+        <img src="/photo/photoNathanUSC.jpeg" alt="Photo of Nathan Huh" class="editorial-photo">
     </div>
+
+    <section class="section-rule detail-grid" id="experience">
+        <h2>Experience</h2>
+        <div class="entry-list">
+            <div class="prose">
+                <div class="entry-heading">
+                    <h3>LG Uplus</h3>
+                    <p class="meta">Jan 2025 – Present</p>
+                </div>
+                <p>DevOps Engineer building an AI Datahub platform (Databricks-like) for unified analytics and machine learning. Refactored queue system code improving Redis CPU usage by 10x and reducing customer queuing time by 2x. Managing CI/CD pipelines, infrastructure automation, and monitoring systems while building internal tooling to enhance development workflows.</p>
+                <ul class="tags" aria-label="Technologies">
+                    <li>Kubernetes</li>
+                    <li>Golang</li>
+                    <li>Python</li>
+                    <li>Terraform</li>
+                    <li>Ansible</li>
+                    <li>Jenkins</li>
+                    <li>GitHub Actions</li>
+                    <li>AWS</li>
+                    <li>Redis</li>
+                    <li>Datadog</li>
+                </ul>
+            </div>
+            <div class="prose">
+                <div class="entry-heading">
+                    <h3>LG Uplus</h3>
+                    <p class="meta">Jun 2024 – Jul 2024</p>
+                </div>
+                <p class="muted">Software Engineering Intern (DevOps)</p>
+                <p>Developed key features for an Internal Developer Platform, including password reset and logging functionalities. Integrated SumoLogic SaaS for improved monitoring and containerized services for efficient deployment.</p>
+                <p>Streamlined CI/CD processes by configuring GitHub Actions for automated code quality checks and led the migration of an EC2-based microservice to EKS, enhancing scalability and resource management.</p>
+            </div>
+            <div class="prose">
+                <div class="entry-heading">
+                    <h3>NAVER Corp</h3>
+                    <p class="meta">Jun 2023 – Aug 2023</p>
+                </div>
+                <p class="muted">Software Development Intern</p>
+                <p>Developed and implemented a Dashboard and Detector to identify expansion situations more efficiently using Golang on Kubernetes environment. Coordinated and led team efforts to design, develop, and test the Detector, ensuring seamless integration with the monitoring system.</p>
+                <p>Conducted performance testing and optimization for the Dashboard, resulting in a 20% reduction in system downtime and improved user experience.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-rule detail-grid">
+        <h2>Education</h2>
+        <div class="entry-list">
+            <div class="prose">
+                <div class="entry-heading">
+                    <h3>University of Southern California</h3>
+                    <p class="meta">2019 – 2024</p>
+                </div>
+                <p>Bachelor of Science in Computer Science</p>
+            </div>
+            <div class="prose">
+                <div class="entry-heading">
+                    <h3>Bugil Academy Global Leader Program</h3>
+                    <p class="meta">Graduated 2019</p>
+                </div>
+                <p>High School</p>
+            </div>
+        </div>
+    </section>
 </section>

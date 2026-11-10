@@ -2,6 +2,7 @@ module.exports = function (eleventyConfig) {
     // Passthrough copy for assets
     eleventyConfig.addPassthroughCopy("src/photo");
     eleventyConfig.addPassthroughCopy("src/pdf");
+    eleventyConfig.addPassthroughCopy("src/fonts");
     // Old image and PDF embeds need the file itself at the original address.
     eleventyConfig.on("eleventy.after", async ({ dir }) => {
         const fs = require("node:fs/promises");

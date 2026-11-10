@@ -1,0 +1,8 @@
+<div class="entry-meta">
+    <time class="meta" datetime="{{ postDate | date('YYYY-MM-DD') }}">{{ postDate | date('MMMM DD, YYYY') }}</time>
+    {% if postTags %}
+    <ul class="tags" aria-label="Tags">
+        {% for tag in postTags %}<li>{{ tag }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+</div>
