@@ -2,7 +2,8 @@
   "redirects": [
     { "from": "/index/", "to": "/" },
     { "from": "/profile.html", "to": "/profile/" },
-    { "from": "/resume.html", "to": "/resume/" },
+    { "from": "/resume.html", "to": "/profile/" },
+    { "from": "/resume/", "to": "/profile/" },
     { "from": "/personalProjects.html", "to": "/personalProjects/" }
   ],
   "assets": [

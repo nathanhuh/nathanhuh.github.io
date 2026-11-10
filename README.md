@@ -10,8 +10,7 @@ This is a static website built using the [Eleventy (11ty)](https://www.11ty.dev/
 
 - **Source Files:** Located primarily in the root directory (by default). Eleventy processes these.
   - `index.html`: The main landing page template.
-  - `profile.html`: Template for the profile page.
-  - `resume.html`: Template for the resume page.
+  - `profile.html`: Template for About, including the résumé download.
   - `personalProjects.html`: Template for the personal projects page.
   - `style.css`: Provides the styling for the website (copied by Eleventy).
   - `photo/`: Directory containing images used on the site (copied by Eleventy).
@@ -50,7 +49,8 @@ The route inventory in `src/_data/legacyRoutes.json` comes from the original HTM
 | --- | --- |
 | `/index.html` | Serves the home page directly. |
 | `/index/` | Redirects to `/`. |
-| `/profile.html`, `/resume.html`, `/personalProjects.html` | Redirect to `/profile/`, `/resume/`, and `/personalProjects/` respectively. |
+| `/profile.html`, `/resume.html`, `/resume/` | Redirect to About at `/profile/`. |
+| `/personalProjects.html` | Redirects to `/personalProjects/`. |
 | `/amberllama81.github.io/photo/photoHusky.JPG` and its lowercase `.jpg` spelling | Serve the original Husky image so old embeds still work. |
 | `/amberllama81.github.io/pdf/resume_nathanHuh.pdf` | Serves the current resume PDF. The original unprefixed PDF and image URLs still serve their files. |
 | `/photo/photoHusky 2.JPG`, `/pdf/resume_nathanHuh 2.pdf` | Serve the Husky image and current resume at the old duplicate filenames. |

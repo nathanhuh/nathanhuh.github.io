@@ -1,15 +1,19 @@
-<header class="w-full border-b border-[#e5e5e5]">
-    <nav class="container">
-        <div class="flex items-center justify-between">
-            <a href="/" class="text-xl md:text-2xl lg:text-3xl font-semibold tracking-tight hover:text-[#666666] transition-colors duration-200">
-                Nathan Huh
-            </a>
-            <div class="flex items-center gap-4 md:gap-6">
-                <a href="/profile/" class="text-base md:text-lg lg:text-xl text-[#666666] hover:text-[#1a1a1a] transition-colors duration-200">Profile</a>
-                <a href="/resume/" class="text-base md:text-lg lg:text-xl text-[#666666] hover:text-[#1a1a1a] transition-colors duration-200">Resume</a>
-                <a href="/personalProjects/" class="text-base md:text-lg lg:text-xl text-[#666666] hover:text-[#1a1a1a] transition-colors duration-200">Projects</a>
-                <a href="/blog/" class="text-base md:text-lg lg:text-xl text-[#666666] hover:text-[#1a1a1a] transition-colors duration-200">Blog</a>
-            </div>
-        </div>
+{% set navigation = [
+    { url: "/", label: "Home" },
+    { url: "/personalProjects/", label: "Projects" },
+    { url: "/blog/", label: "Writing" },
+    { url: "/profile/", label: "About" }
+] %}
+<header class="shell">
+    <nav class="masthead" aria-label="Main navigation">
+        <a class="wordmark" href="/">Nathan Huh</a>
+        <ul class="nav-links">
+            {% for item in navigation %}
+            {% set active = page.url == item.url or (item.url == "/blog/" and page.url and page.url.indexOf("/blog/") == 0) %}
+            <li>
+                <a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% elif active %} aria-current="location"{% endif %}>{{ item.label }}</a>
+            </li>
+            {% endfor %}
+        </ul>
     </nav>
 </header>
