@@ -27,16 +27,24 @@ description: DevOps Engineer at LG Uplus, USC Computer Science graduate. Buildin
     <div id="quick-links" class="home-index">
         <section aria-labelledby="projects-title">
             <h2 id="projects-title">Projects</h2>
-            <a class="index-row" href="/personalProjects/">
-                <span>Personal projects</span>
+            <a class="index-row" href="/personalProjects/#unic">
+                <span>unic</span>
                 <span class="index-arrow" aria-hidden="true">↗</span>
             </a>
-            <p class="muted">Technical experiments and side projects.</p>
+            <p class="muted">A Go terminal interface for browsing and operating AWS resources.</p>
+            <p><a class="text-link" href="/personalProjects/">All projects <span aria-hidden="true">↗</span></a></p>
         </section>
         <section aria-labelledby="writing-title">
             <h2 id="writing-title">Writing</h2>
-            <p><a class="text-link" href="/blog/">Explore writing <span aria-hidden="true">↗</span></a></p>
+            {% set latestPost = collections.blog | last %}
+            {% if latestPost %}
+            <a class="index-row" href="{{ latestPost.url }}">
+                <span>{{ latestPost.data.title }}</span>
+                <span class="index-arrow" aria-hidden="true">↗</span>
+            </a>
+            {% endif %}
             <p class="muted">Notes on software engineering, SRE, and infrastructure.</p>
+            <p><a class="text-link" href="/blog/">All writing <span aria-hidden="true">↗</span></a></p>
         </section>
     </div>
 
@@ -48,7 +56,9 @@ description: DevOps Engineer at LG Uplus, USC Computer Science graduate. Buildin
             <p>My approach combines proactive monitoring, rigorous testing, and pragmatic solutions to ensure systems remain available and performant under any condition.</p>
             <div class="link-list">
                 <a href="/profile/">About <span aria-hidden="true">↗</span></a>
+                <a href="/profile/#resume">Résumé <span aria-hidden="true">↗</span></a>
                 <a href="mailto:namjun811@gmail.com">Contact <span aria-hidden="true">↗</span></a>
+                {% include "profile-links.njk" %}
             </div>
         </div>
         <img src="/photo/photoHusky.JPG" alt="Husky" class="editorial-photo husky-photo" loading="lazy">
