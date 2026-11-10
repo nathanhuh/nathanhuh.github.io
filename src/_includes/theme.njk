@@ -1,0 +1,55 @@
+<script>
+    (() => {
+        const root = document.documentElement;
+        const systemTheme = matchMedia("(prefers-color-scheme: dark)");
+        const storageKey = "site-theme";
+
+        function restoreTheme() {
+            try {
+                const saved = localStorage.getItem(storageKey);
+                if (saved === "light" || saved === "dark") {
+                    root.dataset.theme = saved;
+                } else {
+                    delete root.dataset.theme;
+                }
+            } catch {
+                // Keep the current theme when storage is unavailable.
+            }
+        }
+
+        // Apply a saved choice before the stylesheet and first paint.
+        restoreTheme();
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggle = document.querySelector(".theme-toggle");
+            const isDark = () => root.dataset.theme ? root.dataset.theme === "dark" : systemTheme.matches;
+            const syncToggle = () => toggle.setAttribute("aria-pressed", String(isDark()));
+
+            toggle.addEventListener("click", () => {
+                const theme = isDark() ? "light" : "dark";
+                root.dataset.theme = theme;
+                syncToggle();
+                try {
+                    localStorage.setItem(storageKey, theme);
+                } catch {
+                    // The control still works for the current page.
+                }
+            });
+            systemTheme.addEventListener("change", syncToggle);
+            window.addEventListener("storage", (event) => {
+                if (event.key === storageKey || event.key === null) {
+                    restoreTheme();
+                    syncToggle();
+                }
+            });
+            window.addEventListener("pageshow", (event) => {
+                if (event.persisted) {
+                    restoreTheme();
+                    syncToggle();
+                }
+            });
+            syncToggle();
+            toggle.hidden = false;
+        });
+    })();
+</script>
