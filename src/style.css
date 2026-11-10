@@ -9,6 +9,7 @@
 
 :root {
     color-scheme: light dark;
+    overflow-y: scroll;
     --paper: light-dark(#faf7f4, #1d1921);
     --ink: light-dark(#18151b, #f3edf5);
     --muted: light-dark(#514b58, #c8bece);
