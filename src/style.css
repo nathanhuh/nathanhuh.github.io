@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import "tailwindcss/preflight.css" layer(reset);
 
 @font-face {
     font-family: Syne;
@@ -11,8 +11,8 @@
     color-scheme: light;
     --paper: #faf7f4;
     --ink: #18151b;
-    --muted: #5f5965;
-    --rule: #89818b;
+    --muted: #514b58;
+    --rule: #79717c;
     --line: #d8d0d8;
     --violet: #52269b;
     --tint: #eee7f5;
@@ -36,16 +36,20 @@ main {
     min-width: 0;
 }
 
+main:focus-visible {
+    outline-offset: -2px;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--display);
     font-weight: 700;
     line-height: 1.12;
     letter-spacing: -0.035em;
+    overflow-wrap: anywhere;
 }
 
 h1 {
     font-size: clamp(2.5rem, 7vw, 5rem);
-    overflow-wrap: anywhere;
 }
 
 h2 {
@@ -101,6 +105,11 @@ a:hover {
     letter-spacing: -0.04em;
 }
 
+.masthead > .wordmark {
+    display: block;
+    padding-block: 0.35rem;
+}
+
 .nav-links, .link-list, .tags {
     display: flex;
     flex-wrap: wrap;
@@ -114,12 +123,12 @@ a:hover {
 
 .nav-links a {
     display: block;
-    padding: 0.45rem 0 1.15rem;
+    padding: 0.65rem 0 0.95rem;
     border-bottom: 2px solid transparent;
 }
 
 .nav-links [aria-current] {
-    border-color: var(--violet);
+    border-color: currentColor;
     color: var(--violet);
 }
 
@@ -132,10 +141,6 @@ a:hover {
 
 .site-footer .wordmark {
     margin-bottom: 0.25rem;
-}
-
-.site-footer a {
-    overflow-wrap: anywhere;
 }
 
 .hero {
@@ -204,6 +209,7 @@ a:hover {
     padding-bottom: 0.65rem;
     border-bottom: 1px solid var(--line);
     font: 700 clamp(1.25rem, 2.35vw, 1.9rem)/1.3 var(--display);
+    overflow-wrap: anywhere;
 }
 
 .index-arrow, .text-link {
@@ -211,12 +217,12 @@ a:hover {
     font-family: var(--mono);
 }
 
-.text-link, .link-list a, .prose a {
+.text-link, .link-list a, .prose a, .post-list h2 a {
     text-decoration: underline;
     text-underline-offset: 0.25em;
 }
 
-.text-link:hover, .prose a:hover {
+.text-link:hover, .link-list a:hover, .prose a:hover, .post-list h2 a:hover {
     text-decoration-thickness: 2px;
 }
 
@@ -239,6 +245,23 @@ a:hover {
     grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
 }
 
+.resume-options > * + * {
+    margin-block-start: 1rem;
+}
+
+.resume-preview summary {
+    min-block-size: 2.75rem;
+    padding-block: 0.5rem;
+    color: var(--violet);
+    cursor: pointer;
+}
+
+.resume-preview iframe {
+    width: 100%;
+    height: clamp(28rem, 75vh, 54rem);
+    border: 1px solid var(--rule);
+}
+
 .editorial-photo {
     width: 100%;
     height: auto;
@@ -258,9 +281,15 @@ a:hover {
 }
 
 .link-list {
-    gap: 0.6rem 1.5rem;
+    gap: 0.25rem 1.5rem;
     font-family: var(--mono);
     font-size: 0.875rem;
+}
+
+.link-list a {
+    max-inline-size: 100%;
+    padding-block: 0.35rem;
+    overflow-wrap: anywhere;
 }
 
 .entry-heading, .entry-meta {
@@ -324,6 +353,7 @@ a:hover {
 
 .post-list article > .text-link {
     display: inline-block;
+    padding-block: 0.25rem;
 }
 
 .post-content {
@@ -350,8 +380,8 @@ a:hover {
     color: var(--violet);
 }
 
-.prose ul:not(.tags), .prose ol {
-    padding-left: 1.5em;
+.prose :where(ul:not(.tags), ol) {
+    padding-inline-start: 1.5em;
 }
 
 .prose ul:not(.tags) {
@@ -362,12 +392,8 @@ a:hover {
     list-style: decimal;
 }
 
-.prose li + li {
-    margin-top: 0.35em;
-}
-
-.prose .tags li {
-    margin-top: 0;
+.prose :where(ul:not(.tags), ol) > li + li {
+    margin-block-start: 0.35em;
 }
 
 .prose code {
@@ -421,7 +447,8 @@ a:hover {
     }
 
     .nav-links a {
-        padding-bottom: 0.75rem;
+        min-block-size: 2.75rem;
+        padding-block: 0.65rem;
     }
 
     .hero, .home-index, .about-grid, .detail-grid {
@@ -446,5 +473,17 @@ a:hover {
         padding: 2rem 0 0;
         border-top: 1px solid var(--line);
         border-left: 0;
+    }
+
+    .resume-preview {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
     }
 }

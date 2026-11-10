@@ -19,7 +19,6 @@ description: Thoughts, experiences, and technical insights on software engineeri
             {% set postTags = post.data.tags %}
             {% include "post-meta.njk" %}
             {% if post.data.description %}<p class="muted">{{ post.data.description }}</p>{% endif %}
-            <a class="text-link" href="{{ post.url }}">Read more <span aria-hidden="true">↗</span></a>
         </article>
         {% else %}
         <p class="muted">No blog posts yet. Check back soon!</p>

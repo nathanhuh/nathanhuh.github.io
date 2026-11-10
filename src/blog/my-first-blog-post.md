@@ -8,7 +8,7 @@ tags:
 layout: blog-post.njk
 ---
 
-# Welcome to My Blog
+## Welcome to My Blog
 
 This is my first blog post! I'm excited to start sharing my thoughts, experiences, and technical insights here.
 
