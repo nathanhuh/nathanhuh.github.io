@@ -1,17 +1,19 @@
 ---
 layout: base.njk
-title: About - Nathan Huh
-description: Learn more about Nathan Huh, DevOps Engineer at LG Uplus and USC Computer Science graduate.
+eleventyComputed:
+    title: "About - {{ site.title }}"
+    description: "Learn about Nathan Huh, {{ site.headline }} at LG Uplus and a USC Computer Science graduate."
 ---
 
 <section class="shell interior">
     <header class="page-heading">
         <h1>About</h1>
+        <p>{{ site.headline }} · LG Uplus</p>
     </header>
 
     <div class="about-grid section-rule">
         <div class="prose">
-            <p>Nathan Huh is a DevOps Engineer at LG Uplus and graduated in 2024 with a Bachelor of Science in Computer Science from USC.</p>
+            <p>Nathan Huh graduated in 2024 with a Bachelor of Science in Computer Science from USC.</p>
             <p>
                 Nathan Huh was born in Busan, Republic of Korea, and moved to Cheonan, South Korea to attend boarding school.
                 He graduated from <a href="https://www.bugilacademy.org/eng/index">Bugil Academy Global Leader Program</a> in 2019
@@ -19,7 +21,7 @@ description: Learn more about Nathan Huh, DevOps Engineer at LG Uplus and USC Co
             </p>
             <p>
                 He served two years in the South Korean military during the COVID-19 pandemic and returned to USC in 2022.
-                After graduating from USC, he joined LG Uplus as a DevOps Engineer.
+                After graduating from USC, he joined LG Uplus.
             </p>
             <div class="link-list">
                 {% include "profile-links.njk" %}
@@ -50,7 +52,8 @@ description: Learn more about Nathan Huh, DevOps Engineer at LG Uplus and USC Co
                     <h3>LG Uplus</h3>
                     <p class="meta">Jan 2025 – Present</p>
                 </div>
-                <p>DevOps Engineer building an AI Datahub platform (Databricks-like) for unified analytics and machine learning. Refactored queue system code improving Redis CPU usage by 10x and reducing customer queuing time by 2x. Managing CI/CD pipelines, infrastructure automation, and monitoring systems while building internal tooling to enhance development workflows.</p>
+                <p class="muted">{{ site.headline }}</p>
+                <p>Builds an AI Datahub platform for unified analytics and machine learning. Optimized Redis-backed queue processing to reduce CPU usage and customer wait times. Manages CI/CD pipelines, infrastructure automation, and monitoring systems, and builds internal tools for developers.</p>
                 <ul class="tags" aria-label="Technologies">
                     <li>Kubernetes</li>
                     <li>Golang</li>
