@@ -10,6 +10,7 @@
     { "from": "/amberllama81.github.io/photo/photoHusky.JPG", "to": "/photo/photoHusky.JPG" },
     { "from": "/amberllama81.github.io/photo/photoHusky.jpg", "to": "/photo/photoHusky.JPG" },
     { "from": "/amberllama81.github.io/pdf/resume_nathanHuh.pdf", "to": "/pdf/Namjun_Huh_Resume.pdf" },
+    { "from": "/pdf/resume_nathanHuh.pdf", "to": "/pdf/Namjun_Huh_Resume.pdf" },
     { "from": "/photo/photoHusky 2.JPG", "to": "/photo/photoHusky.JPG" },
     { "from": "/pdf/resume_nathanHuh 2.pdf", "to": "/pdf/Namjun_Huh_Resume.pdf" }
   ],

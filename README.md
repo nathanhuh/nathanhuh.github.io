@@ -4,7 +4,7 @@ This repository contains the source code for Nathan Huh's personal website.
 
 ## Overview
 
-This is a static website built using the [Eleventy (11ty)](https://www.11ty.dev/) static site generator. It serves as an online portfolio and presence for Nathan Huh, a Software Engineer (Infrastucture) for LG Uplus, telecommunication arm of LG group we all know and love. 
+This is a static website built using the [Eleventy (11ty)](https://www.11ty.dev/) static site generator. It serves as an online portfolio and presence for Nathan Huh, a Software Engineer (Infrastructure) at LG Uplus.
 
 ## Structure
 
@@ -52,7 +52,7 @@ The route inventory in `src/_data/legacyRoutes.json` comes from the original HTM
 | `/profile.html`, `/resume.html`, `/resume/` | Redirect to About at `/profile/`. |
 | `/personalProjects.html` | Redirects to `/personalProjects/`. |
 | `/amberllama81.github.io/photo/photoHusky.JPG` and its lowercase `.jpg` spelling | Serve the original Husky image so old embeds still work. |
-| `/amberllama81.github.io/pdf/resume_nathanHuh.pdf` | Serves the current resume PDF. The original unprefixed PDF and image URLs still serve their files. |
+| `/amberllama81.github.io/pdf/resume_nathanHuh.pdf`, `/pdf/resume_nathanHuh.pdf` | Serve the current résumé PDF. |
 | `/photo/photoHusky 2.JPG`, `/pdf/resume_nathanHuh 2.pdf` | Serve the Husky image and current resume at the old duplicate filenames. |
 | `/src/` and its old profile, resume, and projects pages, `/README/` | Return the custom 404. These generated pages were retired in NAT-18. |
 | Old Coex photo paths | Return the custom 404. The inventory records each retired path. |
@@ -63,4 +63,4 @@ Run `npm run build && node scripts/check-routes.mjs` to verify the artifact. Run
 
 ## Contact
 
-Nathan Huh can be contacted via nhuh@usc.edu.
+Nathan Huh can be contacted via namjun811@gmail.com.
