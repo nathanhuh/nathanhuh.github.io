@@ -544,3 +544,19 @@ a:hover {
         scroll-behavior: auto !important;
     }
 }
+
+.project-columns {
+    display: grid;
+    gap: 2.5rem clamp(2rem, 6vw, 5.5rem);
+    align-items: start;
+}
+
+.project-columns > section > h2 {
+    margin-bottom: 0.75rem;
+}
+
+@media (min-width: 48rem) {
+    .project-columns {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
