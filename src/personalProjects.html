@@ -1,15 +1,27 @@
 ---
 layout: base.njk
-title: Personal Projects - Nathan Huh
-description: Explore Nathan Huh's personal projects and technical experiments.
+title: Projects - Nathan Huh
+description: Explore Nathan Huh's work and personal projects.
 ---
 
 <section class="shell interior">
     <header class="page-heading">
-        <h1>Personal Projects</h1>
-        <p class="muted">Selected work in cloud tooling and web publishing.</p>
+        <h1>Projects</h1>
+        <p class="muted">Selected work in infrastructure, cloud tooling, and web publishing.</p>
     </header>
 
+    <section id="work" aria-labelledby="work-title">
+        <h2 id="work-title">Work</h2>
+        <div class="post-list">
+            <article id="redis-queue">
+                <h3>Redis queue performance at LG U+</h3>
+                <p>During traffic spikes, queue position lookups were a bottleneck for LG U+’s membership service. I proposed and implemented the switch from Redis Lists to Sorted Sets. The change sped up lookups and reduced CPU load.</p>
+                <a class="text-link" href="https://techblog.uplus.co.kr/redis-list%EC%97%90%EC%84%9C-sorted-set%EC%9C%BC%EB%A1%9C-%EB%8C%80%EA%B8%B0%EC%97%B4-%EC%A1%B0%ED%9A%8C-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94-%EC%82%AC%EB%A1%80-6730a60bf9e2">Read the LG U+ Techblog case study <span aria-hidden="true">↗</span></a>
+            </article>
+        </div>
+    </section>
+
+    <h2>Personal Projects</h2>
     <div class="post-list">
         <article id="unic">
             <h2>unic</h2>
